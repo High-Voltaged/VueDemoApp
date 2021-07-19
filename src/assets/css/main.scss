@@ -1,20 +1,14 @@
+@import '_vars';
+@import '_mixins';
 
 // MAJOR UTILITY STYLING
 
 body {
-   font-family: 'Roboto', sans-serif;
+   font-family: 'Montserrat', sans-serif;
 }
 
 button {
    &:focus, &:active {
       outline: none;
    }
-}
-
-.vs-button {
-   margin: 0 !important;
-}
-
-.main-util {
-   background-color: gray;
 }
