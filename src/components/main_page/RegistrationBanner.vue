@@ -27,7 +27,7 @@
       </form>
 
       <span class="regbanner__overlay inline-block absolute">
-         <img :src="require('~/assets/images/misc_icons/mail.svg')" />
+         <img :src="require('~/assets/images/misc_icons/mail.svg')" class="select-none" />
       </span>
 
    </div>

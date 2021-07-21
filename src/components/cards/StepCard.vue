@@ -5,10 +5,10 @@
       <div class="steps-card__card flex items-start space-x-8">
 
          <span class="steps-card__card-img inline-block relative">
-            <img :src="require(`~/assets/images/steps_icons/${icon}.svg`)" alt="icon" class="w-full h-full" />
+            <img :src="require(`~/assets/images/steps_icons/${icon}.svg`)" alt="icon" class="w-full h-full select-none" />
          
             <div class="steps-card__card-img--badge absolute flex items-center justify-center">
-               <span> {{ `0${id + 1}` }} </span>
+               <span class="select-none"> {{ `0${id + 1}` }} </span>
             </div>
          </span>
 

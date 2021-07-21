@@ -5,7 +5,7 @@
       <div class="advantages-card__card flex flex-col items-center justify-center w-full h-full overflow-hidden">
 
          <span class="inline-block">
-            <img :src="require(`~/assets/images/advant_icons/${icon}.svg`)" alt="icon" />
+            <img :src="require(`~/assets/images/advant_icons/${icon}.svg`)" alt="icon" class="select-none" />
          </span>
 
          <span class="inline-block card-title text-center"> {{ title }} </span>

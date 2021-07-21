@@ -56,7 +56,7 @@
       </div>
 
       <div class="main__container__main-steps--overlay absolute">
-         <img :src="require(`~/assets/images/misc_icons/steps_overlay.svg`)" />
+         <img :src="require(`~/assets/images/misc_icons/steps_overlay.svg`)" class="select-none" />
       </div>
 
    </div>

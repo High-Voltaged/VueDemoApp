@@ -63,11 +63,11 @@
          <div class="icon-container flex items-center space-x-4">
 
             <div class="inline-block">
-               <img :src="require(`~/assets/images/misc_icons/visa.svg`)" alt="visa" />
+               <img :src="require(`~/assets/images/misc_icons/visa.svg`)" alt="visa" class="select-none" />
             </div>
 
             <div class="inline-block">
-               <img :src="require(`~/assets/images/misc_icons/mastercard.svg`)" alt="visa" />
+               <img :src="require(`~/assets/images/misc_icons/mastercard.svg`)" alt="visa" class="select-none" />
             </div>
 
          </div>
@@ -88,7 +88,7 @@
                class="social-icon flex items-center justify-center cursor-pointer">
 
                <div class="inline-block">
-                  <img :src="require(`~/assets/images/social_icons/${icon}.svg`)" />
+                  <img :src="require(`~/assets/images/social_icons/${icon}.svg`)"  class="select-none"/>
                </div>
 
             </div>

@@ -46,21 +46,17 @@
 
          </div>
          
-         <div class="calc-card__vals flex flex-col items-start space-y-4 mt-12">
+         <div class="calc-card__vals flex items-center space-x-20 mt-12">
 
-            <div class="flex items-center space-x-20">
-
-               <CalcCard 
-                  v-for="(card, i) in results"
-                  :key="i"
-                  :id="i"
-                  :param="card"
-                  :stat_param="stats[i]"
-                  :result="formatResult(i)"
-                  :stat_result="formatStats(i)"
-               />
-
-            </div>
+            <CalcCard 
+               v-for="(card, i) in results"
+               :key="i"
+               :id="i"
+               :param="card"
+               :stat_param="stats[i]"
+               :result="formatResult(i)"
+               :stat_result="formatStats(i)"
+            />
 
          </div>
 
@@ -241,49 +237,6 @@
                   }
 
                }
-            }
-
-            // &__vals {
-               // grid-template-columns: repeat(3, 1fr);
-
-               .results-card-divider {
-                  // left: -70px;
-               } 
-            // }
-
-            &__results--card {
-
-               color: white;
-               span {
-                  @include typography(16px, 600, 24px);
-               }
-               div span:nth-of-type(1) {
-                  @include typography(32px, 600, 39px);
-               }
-               div span:nth-of-type(2) {
-                  @include typography(18px, 600, 22px);
-               }
-               &.primary {
-                  color: var(--color-secondary-2);
-               }
-            }
-
-            &__stats--card {
-
-               color: white;
-               .info-title .title {
-                  @include typography(16px, 600, 24px);
-                  color: var(--color-gray);
-               }
-
-               div span:nth-of-type(1) {
-                  @include typography(32px, 600, 39px);
-               }
-               
-               div span:nth-of-type(2) {
-                  @include typography(18px, 600, 22px);
-               }
-
             }
 
             &__button button {
