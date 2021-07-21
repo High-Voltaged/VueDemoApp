@@ -1,7 +1,8 @@
-
+// Responsive layout breakpoints
 $screen-min-lg: 1024px; 
 $screen-max-lg: 1579px; 
 
+// Major colors
 :root {
 
    --color-primary: #202022;
@@ -22,6 +23,7 @@ $screen-max-lg: 1579px;
 
 }
 
+// Container- and card-related
 :root {
 
    --container-width-xl: 80rem;
@@ -47,6 +49,7 @@ $screen-max-lg: 1579px;
 
 }
 
+// Slider-related
 :root {
    --slider-size: 3rem;
    --slider-x-padding: 1.5rem;

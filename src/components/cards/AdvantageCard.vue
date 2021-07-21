@@ -8,7 +8,7 @@
             <img :src="require(`~/assets/images/advant_icons/${icon}.svg`)" alt="icon" />
          </span>
 
-         <span class="inline-block card-title"> {{ title }} </span>
+         <span class="inline-block card-title text-center"> {{ title }} </span>
 
          <span class="inline-block card-text mt-5 text-center"> {{ text }} </span>
 

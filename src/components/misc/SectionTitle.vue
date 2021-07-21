@@ -2,7 +2,7 @@
    
    <div class="section-title flex flex-col items-center">
 
-      <div class="section-title__title inline-block flex flex-nowrap space-x-4">
+      <div class="section-title__title inline-block flex flex-nowrap space-x-4 select-none">
 
          <span> {{ titleMod[0] }} </span>
          <span> {{ titleMod[1] }} </span>

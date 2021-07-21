@@ -4,7 +4,7 @@
 
       <div class="main__container__banner w-full">
 
-         <img :src="require('~/assets/images/main_background.png')" class="w-full h-full" />
+         <img :src="require('~/assets/images/main_background.png')" class="w-full h-full select-none" />
 
          <div class="main__container__banner-overlay"></div>
 

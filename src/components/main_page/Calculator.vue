@@ -46,68 +46,19 @@
 
          </div>
          
-         <div class="calc-card__vals flex items-center space-x-20 mt-12">
+         <div class="calc-card__vals flex flex-col items-start space-y-4 mt-12">
 
-            <div
-               v-for="(card, i) in results"
-               :key="i" 
-               class="calc-card__vals--wrapper flex flex-col items-start space-y-4">
+            <div class="flex items-center space-x-20">
 
-               <div
-                  :class="{ 'primary': (i == 0) }"
-                  class="calc-card__results--card flex flex-col items-start">
-
-                  <span class="inline-block"> {{ card }} </span>
-
-                  <div class="flex items-baseline mt-4">
-
-                     <span class="inline-block"> 
-                        {{ `${formatResult(i)[0]} ${formatResult(i)[1]}` }} 
-                     </span>
-
-                     <span v-if="i != 2" class="inline-block" :class="{ 'ml-2': (i != 2) }">
-                        {{ `${formatResult(i)[2]}` }}
-                     </span>
-
-                  </div>
-
-               </div>
-
-               <!-- <span class="inline-block">
-                  <svg width="1" height="80" viewBox="0 0 1 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <rect width="1" height="80" fill="#46464E"/>
-                  </svg>
-               </span> -->
-
-               <div class="calc-card__stats--card flex flex-col items-start">
-
-                  <div class="info-title flex items-center space-x-2">
-
-                     <span class="title inline-block"> {{ card }} </span>
-
-                     <span v-if="i != 0" class="info-icon inline-block">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#878793" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                           <path d="M9.08984 9.00008C9.32495 8.33175 9.789 7.76819 10.3998 7.40921C11.0106 7.05024 11.7287 6.91902 12.427 7.03879C13.1253 7.15857 13.7587 7.52161 14.2149 8.06361C14.6712 8.60561 14.9209 9.2916 14.9198 10.0001C14.9198 12.0001 11.9198 13.0001 11.9198 13.0001V14.5" stroke="#878793" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                           <path d="M12 17H12.01" stroke="#878793" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                     </span>
-
-                  </div>
-
-                  <div class="flex items-baseline mt-4">
-
-                     <span class="inline-block"> 
-                        {{ formatStats(i)[0] }} 
-                     </span>
-
-                     <span v-if="i != 2" class="inline-block" :class="{ 'ml-2': (i != 2) }">
-                        {{ formatStats(i)[1] }}   
-                     </span>
-
-                  </div>
-
-               </div>
+               <CalcCard 
+                  v-for="(card, i) in results"
+                  :key="i"
+                  :id="i"
+                  :param="card"
+                  :stat_param="stats[i]"
+                  :result="formatResult(i)"
+                  :stat_result="formatStats(i)"
+               />
 
             </div>
 
@@ -147,11 +98,13 @@
 
    import { Component, Prop, Vue } from "nuxt-property-decorator";
    import SectionTitle from '../misc/SectionTitle.vue';
+   import CalcCard from '../cards/CalcCard.vue';
 
    @Component({
       name: 'Calculator',
       components: {
          SectionTitle,
+         CalcCard,
       }
    })
    export default class Calculator extends Vue {
@@ -290,7 +243,16 @@
                }
             }
 
+            // &__vals {
+               // grid-template-columns: repeat(3, 1fr);
+
+               .results-card-divider {
+                  // left: -70px;
+               } 
+            // }
+
             &__results--card {
+
                color: white;
                span {
                   @include typography(16px, 600, 24px);

@@ -10,6 +10,7 @@ body {
 }
 
 button {
+   user-select: none;
    &:focus, &:active {
       outline: none;
    }

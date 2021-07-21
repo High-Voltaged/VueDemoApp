@@ -16,7 +16,7 @@
 
             <div class="banner-form--wrapper flex items-center justify-between w-full xl:justify-start">
 
-               <div class="slider-count flex items-baseline space-x-2 order-last xl:order-none xl:absolute">
+               <div class="slider-count flex items-baseline space-x-2 order-last xl:order-none xl:absolute select-none">
 
                   <span> {{ `0${currentSlide}` }} </span>
                   <span>/</span>

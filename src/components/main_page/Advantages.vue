@@ -48,24 +48,6 @@
          { icon: 'users', title: "Without Mediators", text: "во вторых создали систему которая позволяет Вам инвестировать без посредников" },
       ];
 
-      getOrder(index: number) {
-
-         if (index == 2) {
-            
-            return ++index;
-
-         } else if (index == 3) {
-            
-            return --index;
-         
-         } else {
-         
-            return index;
-         
-         }
-
-      }
-
    } 
 
 </script>
