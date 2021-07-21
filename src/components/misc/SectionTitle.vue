@@ -4,8 +4,8 @@
 
       <div class="section-title__title inline-block flex flex-nowrap space-x-4 select-none">
 
-         <span> {{ titleMod[0] }} </span>
-         <span> {{ titleMod[1] }} </span>
+         <span :class="{'primary': (primary == 0) }"> {{ titleMod[0] }} </span>
+         <span :class="{'primary': (primary == 1) }"> {{ titleMod[1] }} </span>
 
       </div>
 
@@ -27,6 +27,7 @@
 
       @Prop() readonly title: string;
       @Prop() readonly text: string;
+      @Prop({ default: 0 }) readonly primary: 0 | 1;
 
       get titleMod(): string[] {
 
@@ -46,11 +47,11 @@
       &__title {
          @include typography(56px, 600, 66px);
 
-         span:nth-of-type(1) {
+         span {
             color: white;
          }
 
-         span:nth-of-type(2) {
+         span.primary {
             color: var(--color-secondary);
          }
       }

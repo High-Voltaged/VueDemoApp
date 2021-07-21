@@ -2,7 +2,7 @@
    
    <div class="main__container__main-advants flex flex-col items-center lg:mt-24 xl:mt-32 w-full">
 
-      <SectionTitle :title="title" :text="text" />
+      <SectionTitle :title="title" :text="text" :primary="1" />
 
       <div class="advants-card-container grid w-full gap-x-4 gap-y-10 mt-16">
 
