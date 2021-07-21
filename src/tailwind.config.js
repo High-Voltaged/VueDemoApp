@@ -7,11 +7,10 @@ module.exports = {
    theme: {
    
       screens: {
-         'sm': '500px',
+         'sm': '320px',
          'md': '768px',
          'lg': '1024px',
-         'xl': '1280px',
-         '2xl': '1536px',
+         'xl': '1579px',
       },
 
       extend: {
@@ -29,6 +28,14 @@ module.exports = {
             success: '#46c93a',
             warn: '#ffba00',
             
+            primary: '#202022',
+            'primary-2': '#27272B',
+            secondary: '#E0BD89',
+            tertiary: 'rgba(32, 32, 34, 0.3)',
+
+            gray: '#878793',
+            'gray-2': '#46464E',
+
             gray: {
                1: '#1e1f21',
                2: '#2F3136',

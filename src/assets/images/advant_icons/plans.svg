@@ -1,0 +1,39 @@
+<svg width="164" height="164" viewBox="0 0 164 164" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5" filter="url(#filter0_f)">
+<rect x="20" y="20" width="124" height="124" rx="62" fill="url(#paint0_radial)"/>
+</g>
+<rect opacity="0.2" x="50" y="50" width="64" height="64" rx="32" fill="#E0BD89"/>
+<rect x="43" y="43" width="78" height="20" rx="3" stroke="#E0BD89" stroke-width="2"/>
+<rect x="43" y="73" width="22" height="48" rx="3" stroke="#E0BD89" stroke-width="2"/>
+<rect x="43" y="73" width="22" height="12" rx="3" stroke="#E0BD89" stroke-width="2"/>
+<path d="M47 79H61" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<path d="M50 101H58" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<path d="M50 95H58" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<path d="M50 107H58" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<path d="M50 113H58" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<rect x="71" y="73" width="22" height="48" rx="3" stroke="#E0BD89" stroke-width="2"/>
+<rect x="71" y="73" width="22" height="12" rx="3" stroke="#E0BD89" stroke-width="2"/>
+<path d="M75 79H89" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<path d="M78 101H86" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<path d="M78 95H86" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<path d="M78 107H86" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<path d="M78 113H86" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<rect x="99" y="73" width="22" height="48" rx="3" stroke="#E0BD89" stroke-width="2"/>
+<rect x="99" y="73" width="22" height="12" rx="3" stroke="#E0BD89" stroke-width="2"/>
+<path d="M103 79H117" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<path d="M106 101H114" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<path d="M106 95H114" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<path d="M106 107H114" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<path d="M106 113H114" stroke="#E0BD89" stroke-width="2" stroke-linecap="round"/>
+<defs>
+<filter id="filter0_f" x="0" y="0" width="164" height="164" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur"/>
+</filter>
+<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(82 82) rotate(90) scale(62)">
+<stop stop-color="#E0BD89"/>
+<stop offset="1" stop-color="#E0BD89" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

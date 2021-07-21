@@ -1,7 +1,8 @@
 <template>
    
-   <div class="main w-screen h-screen flex flex-col relative z-10 overflow-x-hidden">
+   <div class="main flex flex-col items-center relative z-10">
 
+      <!-- <Navbar v-if="!fixed" /> -->
       <Navbar />
 
       <MainContainer />

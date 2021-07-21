@@ -1,8 +1,8 @@
 <template>
-   
-   <div class="navbar flex-0 flex items-center justify-center w-full">
 
-      <div class="navbar-navbar flex items-center">
+   <div :class="fixed ? 'scrolled items-center' : 'items-end'" class="sticky navbar flex top-0 w-full">
+
+      <div class="navbar-content flex items-center justify-between w-full">
 
          <div class="block">
 
@@ -12,30 +12,30 @@
 
          </div>
 
-         <div class="navbar-navbar--tabs flex items-center space-x-8 lg:ml-20 xl:ml-22"> 
+         <div class="navbar-content--tabs flex items-center space-x-8 ml-12 tracking-tighter"> 
 
             <div 
                v-for="(tab, i) in tabs"
                @click="clickBtn(i)"
                :key="i"
-               class="navbar-navbar--tabs__tab relative cursor-pointer">
+               class="navbar-content--tabs__tab relative cursor-pointer">
 
-               <span :class="{ 'selected': isSelected(i) }">
+               <span :class="{ 'selected': isSelected(i) }" class="inline-block">
                   {{ tab.title }}
                </span>
 
                <div 
                   :class="isSelected(i) ? 'selected-badge' : 'unselected-badge'"
-                  class="navbar-navbar-tab__selected absolute inset-x-0 -inset-y-5"
+                  class="navbar-content-tab__selected absolute inset-x-0 -inset-y-5"
                ></div>
 
             </div>
 
          </div>
 
-         <div class="navbar-navbar--btns flex items-center space-x-4 lg:ml-24 ">
+         <div class="navbar-content--btns flex items-center space-x-4 ml-12">
 
-            <div class="navbar-navbar--btns__btn">
+            <div class="navbar-content--btns__btn">
 
                <button class="flex items-center space-x-2"> 
                   
@@ -43,19 +43,18 @@
                
                   <span class="inline-block">
                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 2H12.6667C13.0203 2 13.3594 2.14048 13.6095 2.39052C13.8595 2.64057 14 2.97971 14 3.33333V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H10" stroke="#E0BD89" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M6.66675 11.3333L10.0001 7.99996L6.66675 4.66663" stroke="#E0BD89" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M10 8H2" stroke="#E0BD89" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 2H12.6667C13.0203 2 13.3594 2.14048 13.6095 2.39052C13.8595 2.64057 14 2.97971 14 3.33333V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.66675 11.3333L10.0001 7.99996L6.66675 4.66663" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 8H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                      </svg>
 
                   </span>
                
                </button>
             
-
             </div>
 
-            <div class="navbar-navbar--btns__btn">
+            <div class="navbar-content--btns__btn">
 
                <button class="flex items-center space-x-2"> 
                   
@@ -115,6 +114,33 @@
 
       }
 
+      fixed: boolean = false;
+      get getFixed() {
+
+         return this.fixed;
+
+      }
+
+      mounted() {
+
+         window.document.onscroll = () => {
+
+            let navbar = document.getElementsByClassName('navbar')[0] as HTMLElement;
+
+            if (window.scrollY > navbar.offsetHeight) {
+               
+               this.fixed = true;
+            
+            } else {
+            
+               this.fixed = false;
+            
+            }
+
+         }
+
+      }
+
    } 
 
 </script>
@@ -123,11 +149,18 @@
 
    .navbar {
       height: var(--navbar-height);
-      padding: var(--navbar-padding) 0;
+      padding-right: var(--container-spacing);
+      padding-left: var(--container-spacing);
+      z-index: 40;
+      transition: all .3s ease;
 
-      &-navbar {
-         height: calc(var(--navbar-height) / 2);
+      &.scrolled {
+         height: var(--navbar-height-sm);
+         background: var(--color-primary);
+      }
 
+      &-content {
+   
          &--tabs__tab {
             .selected_badge {
                transform: translateY(0) !important;
@@ -143,7 +176,7 @@
                @include typography(16px, 500, 20px);
                color: white;
             }
-
+   
             .selected {
                color: var(--color-secondary);
                transition: all 0.3s ease;
@@ -154,38 +187,51 @@
             width: 100%;
             height: 2px;
             margin-top: 10px;
-
+   
             transition: all 0.3s ease;
             background-color: var(--color-secondary);
          }
-
-         &--btns__btn button {
-            border-radius: var(--btn-radius);
-            padding: 14px 24px;
-         }
-         
+   
          &--btns__btn:nth-of-type(1) button {
             border: 1px solid var(--color-secondary);
             background: transparent;
             
+            &:hover span, &:focus span {
+               color: var(--color-primary);
+            }
+            // &:hover svg, &:focus svg {
+            //    color: var(--color-primary) ;
+            // }
             span {
                @include typography(16px, 500, 20px);
                color: var(--color-secondary);
             }
          }   
-
+   
          &--btns__btn:nth-of-type(2) button {
             background: var(--color-secondary);
-            
+
             span {
                @include typography(16px, 500, 20px);
                color: var(--color-primary);
             }
          }
-
+         
+         &--btns__btn button {
+            border-radius: var(--btn-radius);
+            padding: 14px 24px;
+            
+            transition: all .3s ease;
+            &:hover {
+               background: var(--color-hover-btn);
+            }
+            &:focus {
+               background: var(--color-focus-btn);
+            }
+         }
+   
       }
 
    }
-
 
 </style>

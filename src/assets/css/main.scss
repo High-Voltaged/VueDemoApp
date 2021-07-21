@@ -5,10 +5,51 @@
 
 body {
    font-family: 'Montserrat', sans-serif;
+
+   overflow-x: hidden;
 }
 
 button {
    &:focus, &:active {
       outline: none;
+   }
+}
+
+@media screen and (min-width: #{$screen-min-lg}) and (max-width: #{$screen-max-lg}) {
+
+   .main__container {
+      padding-right: var(--container-spacing-lg) !important;
+      padding-left: var(--container-spacing-lg) !important;
+
+      &__main-banner, .banner-form {
+         margin-right: 0 !important;
+         margin-left: 0 !important;
+
+         &--wrapper {
+            width: 100% !important;
+         }
+      }
+   }
+
+   .navbar {
+      padding-right: var(--container-spacing-lg) !important;
+      padding-left: var(--container-spacing-lg) !important;
+   }
+
+}
+
+.comments-slider {
+
+   &__btn {
+      width: var(--slider-size);
+      height: var(--slider-size);
+      background: rgba(32, 32, 34, 0.3);
+      border-radius: var(--slider-radius);
+      transition: all .3s ease;
+
+      &:hover, &:focus {
+         background: rgba(224, 189, 137, 0.3);
+         color: var(--color-secondary);
+      }
    }
 }
