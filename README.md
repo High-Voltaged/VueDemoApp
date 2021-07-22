@@ -6,10 +6,10 @@
 
 ``` bash
 # install dependencies
-$ npm install # Or yarn install
+$ npm install # Шаг #1
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ npm run dev # Шаг #2
 
 # build for production and launch server
 $ npm run build
