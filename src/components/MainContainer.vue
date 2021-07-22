@@ -86,6 +86,9 @@
 
    .main__container {
 
+      padding-right: var(--container-spacing);
+      padding-left: var(--container-spacing);
+
       &__banner {
          
          position: absolute;
@@ -103,9 +106,6 @@
             bottom: 0;
          }
       }
-
-      padding-right: var(--container-spacing);
-      padding-left: var(--container-spacing);
 
       &__main {
 

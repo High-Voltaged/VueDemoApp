@@ -1,5 +1,5 @@
 // Responsive layout breakpoints
-$screen-min-lg: 1024px; 
+$screen-min-lg: 1200px; 
 $screen-max-lg: 1579px; 
 
 // Major colors
@@ -27,15 +27,16 @@ $screen-max-lg: 1579px;
 :root {
 
    --container-width-xl: 80rem;
-   --container-width-lg: 73rem;
+   --container-width-lg: 67rem;
    --container-spacing: calc((100vw - var(--container-width-xl)) / 2);
-   --container-spacing-lg: 3rem;
+   --container-spacing-lg: calc((100vw - var(--container-width-lg)) / 2);
 
    --navbar-height: 4.5rem;
    --navbar-height-sm: 4rem;
    --navbar-padding: 1.5rem;
 
    --card-width-xl: 26rem;
+   --card-width-lg: 21.5rem;
    --card-padding-xl: 48px 60px;
    --card-padding-lg: 20px 14px;
    --card-margin: 20px 4px;

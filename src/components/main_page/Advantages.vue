@@ -4,7 +4,7 @@
 
       <SectionTitle :title="title" :text="text" :primary="1" />
 
-      <div class="advants-card-container grid w-full gap-x-4 gap-y-10 mt-16">
+      <div class="advants-card-container grid w-full gap-x-2 xl:gap-x-4 gap-y-10 mt-16">
 
          <AdvantageCard
             v-for="(card, i) in cards" 
@@ -57,5 +57,13 @@
    .advants-card-container {
       grid-template-columns: repeat(auto-fit, minmax(var(--card-width-xl), 1fr));
    }   
+
+   @media screen and (min-width: #{$screen-min-lg}) and (max-width: #{$screen-max-lg}) {
+
+      .advants-card-container {
+         grid-template-columns: repeat(auto-fit, minmax(var(--card-width-lg), 1fr)) !important;
+      }
+
+   }
 
 </style>
