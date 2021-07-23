@@ -8,7 +8,7 @@
 # install dependencies
 $ npm install # Шаг #1
 
-# serve with hot reload at localhost:3000
+# serve with hot reload at localhost:1337 (in your browser)
 $ npm run dev # Шаг #2
 
 # build for production and launch server
