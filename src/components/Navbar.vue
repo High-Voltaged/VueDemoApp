@@ -26,7 +26,7 @@
 
                <div 
                   :class="isSelected(i) ? 'selected-badge' : 'unselected-badge'"
-                  class="navbar-content-tab__selected absolute inset-x-0 -inset-y-5"
+                  class="navbar-content-tab__selected absolute inset-x-0"
                ></div>
 
             </div>
