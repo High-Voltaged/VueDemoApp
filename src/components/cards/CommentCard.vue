@@ -65,21 +65,21 @@
 
       &__content {
          padding: 32px 24px;
-         background: var(--color-primary-2);
+         background: $color-primary-2;
          border-radius: var(--card-radius);
          box-shadow: var(--card-shadow);
       
          &--comment {
             @include typography(18px, 400, 26px);
-            color: var(--color-gray);
+            color: $color-gray;
          }
          &--username {
             @include typography(18px, 600, 24px);
-            color: var(--color-secondary);
+            color: $color-secondary;
          }
          &--city {
             @include typography(14px, 500, 17px);
-            color: var(--color-gray);
+            color: $color-gray;
          }
       }
 

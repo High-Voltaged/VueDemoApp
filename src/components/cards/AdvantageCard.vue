@@ -40,10 +40,9 @@
 <style lang="scss" scoped>
 
    .advantages-card {
-      max-height: var(--card-max-height-xl);
       
       &__card { 
-         padding: var(--card-padding-xl);
+         padding: $card-padding-xl;
 
          .card-title {
             @include typography(24px, 500, 29px);
@@ -51,12 +50,12 @@
          }
          .card-text {
             @include typography(16px, 400, 24px);
-            color: var(--color-gray);
+            color: $color-gray;
          }
          
       }
       &.odd-card &__card {
-         background: var(--color-primary-2);
+         background: $color-primary-2;
          border-radius: 16px;
       }
 

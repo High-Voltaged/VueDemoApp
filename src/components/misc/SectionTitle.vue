@@ -52,13 +52,13 @@
          }
 
          span.primary {
-            color: var(--color-secondary);
+            color: $color-secondary;
          }
       }
 
       &__text {
          @include typography(18px, 400, 26px);
-         color: var(--color-gray);
+         color: $color-gray;
       }
 
    }

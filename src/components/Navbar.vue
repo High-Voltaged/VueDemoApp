@@ -148,15 +148,15 @@
 <style lang="scss" scoped>
 
    .navbar {
-      height: var(--navbar-height);
-      padding-right: var(--container-spacing);
-      padding-left: var(--container-spacing);
+      height: $navbar-height;
+      padding-right: $container-spacing;
+      padding-left: $container-spacing;
       z-index: 40;
       transition: all .3s ease;
 
       &.scrolled {
-         height: var(--navbar-height-sm);
-         background: var(--color-primary);
+         height: $navbar-height-sm;
+         background: $color-primary;
       }
 
       &-content {
@@ -178,7 +178,7 @@
             }
    
             .selected {
-               color: var(--color-secondary);
+               color: $color-secondary;
                transition: all 0.3s ease;
             }
          }
@@ -189,42 +189,42 @@
             margin-top: 10px;
    
             transition: all 0.3s ease;
-            background-color: var(--color-secondary);
+            background-color: $color-secondary;
          }
    
          &--btns__btn:nth-of-type(1) button {
-            border: 1px solid var(--color-secondary);
+            border: 1px solid $color-secondary;
             background: transparent;
             
             &:hover span, &:focus span {
-               color: var(--color-primary);
+               color: $color-primary;
             }
             
             span {
                @include typography(16px, 500, 20px);
-               color: var(--color-secondary);
+               color: $color-secondary;
             }
          }   
    
          &--btns__btn:nth-of-type(2) button {
-            background: var(--color-secondary);
+            background: $color-secondary;
 
             span {
                @include typography(16px, 500, 20px);
-               color: var(--color-primary);
+               color: $color-primary;
             }
          }
          
          &--btns__btn button {
-            border-radius: var(--btn-radius);
+            border-radius: $btn-radius;
             padding: 14px 24px;
             
             transition: all .3s ease;
             &:hover {
-               background: var(--color-hover-btn);
+               background: $color-hover-btn;
             }
             &:focus {
-               background: var(--color-focus-btn);
+               background: $color-focus-btn;
             }
          }
    

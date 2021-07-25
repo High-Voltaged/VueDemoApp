@@ -176,32 +176,32 @@
 
       &-card {
          padding: 3.5rem 6.75rem;
-         background: var(--color-primary-2);
-         border-radius: calc(var(--btn-radius-sm) * 2);
+         background: $color-primary-2;
+         border-radius: calc(#{$btn-radius-sm} * 2);
       
          .calc-card {
 
             &__text-sm {
                @include typography(16px, 600, 24px);
-               color: var(--color-gray);
+               color: $color-gray;
             }
 
             &__btns {
                padding: 8px;
-               border: 1px solid var(--color-gray-2);
-               border-radius: calc(var(--btn-radius-sm) * 2);
+               border: 1px solid $color-gray-2;
+               border-radius: calc(#{$btn-radius-sm} * 2);
       
                &-btn {
                   padding: 12px 0;
-                  background: var(--color-gray-2);
-                  border-radius: var(--btn-radius-sm);
+                  background: $color-gray-2;
+                  border-radius: $btn-radius-sm;
                   @include typography(16px, 600, 24px);
-                  color: var(--color-gray);
+                  color: $color-gray;
                   transition: all .3s ease;
       
                   &:hover, &:focus, &.selected {
-                     background: var(--color-secondary);
-                     color: var(--color-primary);
+                     background: $color-secondary;
+                     color: $color-primary;
                   }
                }
             } 
@@ -209,9 +209,9 @@
             &__range {
                button {
                   width: 10.5rem;
-                  border: 1px solid var(--color-gray-2);
-                  border-radius: calc(var(--btn-radius-sm) * 2);
-                  color: var(--color-secondary-2);
+                  border: 1px solid $color-gray-2;
+                  border-radius: calc(#{$btn-radius-sm} * 2);
+                  color: $color-secondary-2;
 
                   span:nth-of-type(1) {
                      @include typography(24px, 600, 29px);
@@ -225,7 +225,7 @@
                   
                   height: 8px;
                   -webkit-appearance: none;
-                  border-radius: var(--btn-radius);
+                  border-radius: $btn-radius;
                   
                   &::-webkit-slider-thumb {
                      -webkit-appearance: none;
@@ -240,17 +240,17 @@
             }
 
             &__button button {
-               height: var(--input-height);
+               height: $input-height;
                padding: 21px 32px;
 
-               border-radius: var(--btn-radius);
-               background: var(--color-secondary);
+               border-radius: $btn-radius;
+               background: $color-secondary;
                transition: all .3s ease;
                &:hover {
-                  background: var(--color-hover-btn);
+                  background: $color-hover-btn;
                }
                &:focus {
-                  background: var(--color-focus-btn);
+                  background: $color-focus-btn;
                }
                span {
                   @include typography(18px, 500, 22px);

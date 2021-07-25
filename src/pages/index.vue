@@ -33,7 +33,7 @@
 <style lang="scss" scoped>
 
    .main {
-      background: var(--color-primary);
+      background: $color-primary;
    }
 
 </style>

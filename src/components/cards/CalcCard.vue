@@ -112,7 +112,7 @@
          @include typography(18px, 600, 22px);
       }
       &.primary {
-         color: var(--color-secondary-2);
+         color: $color-secondary-2;
       }
 
    }
@@ -122,7 +122,7 @@
       color: white;
       .info-title .title {
          @include typography(16px, 600, 24px);
-         color: var(--color-gray);
+         color: $color-gray;
       }
 
       div span:nth-of-type(1) {

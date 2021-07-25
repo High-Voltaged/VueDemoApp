@@ -70,11 +70,11 @@
                left: -20px;
 
                border-radius: 67px;
-               background: var(--color-secondary);
+               background: $color-secondary;
 
                span {
                   @include typography(14px, 600, 17px);
-                  color: var(--color-primary);
+                  color: $color-primary;
                }
             }
          }
@@ -88,7 +88,7 @@
             }
             span:nth-of-type(2) {
                @include typography(16px, 400, 24px);
-               color: var(--color-gray);
+               color: $color-gray;
             }
          }
 

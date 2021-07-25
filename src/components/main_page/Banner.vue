@@ -92,17 +92,14 @@
 
 <style lang="scss" scoped>
 
-   .main__container__main-banner {
-      --slider-spacing: 2.75rem;
-      --slider-count-size: 75px;
-   }
+   $slider-spacing: 2.75rem;
 
    .main__container__main-banner, .banner-form {
-      margin-right: calc(-1 * var(--container-spacing));
-      margin-left: calc(-1 * var(--container-spacing));
+      margin-right: calc(-1 * #{$container-spacing});
+      margin-left: calc(-1 * #{$container-spacing});
       
       &--wrapper, .banner-form--wrapper {
-         width: var(--container-width-xl);
+         width: $container-width-xl;
       }
 
       .primary-title {
@@ -123,7 +120,7 @@
          .slider-count {
             top: 50%;
             transform: translateY(-50%);
-            left: var(--slider-spacing);
+            left: $slider-spacing;
 
             color: white;
             span:nth-of-type(1) {
@@ -136,13 +133,13 @@
          }
 
          input {
-            height: var(--input-height);
-            width: calc(var(--input-width) * 2);
+            height: $input-height;
+            width: calc(#{$input-width} * 2);
             padding: 10px 24px;
 
-            border-radius: var(--input-radius);
-            background: var(--color-tertiary);
-            border: 1px solid var(--color-secondary);
+            border-radius: $input-radius;
+            background: $color-tertiary;
+            border: 1px solid $color-secondary;
 
             &:hover, &:focus {
                background: rgba(224, 189, 137, 0.1);
@@ -151,29 +148,29 @@
 
             &::placeholder {
                @include typography(16px, 400, 24px);
-               color: var(--color-placeholder);
+               color: $color-placeholder;
             }
          }
 
          button {
-            height: var(--input-height);
-            width: calc(var(--input-width) - 3.75rem);
+            height: $input-height;
+            width: calc(#{$input-width} - 3.75rem);
             padding: 21px 32px;
-            margin-left: calc(-1 * (var(--input-width) - 3.75rem));
+            margin-left: calc(-1 * (#{$input-width} - 3.75rem));
 
-            border-radius: var(--btn-radius);
-            background: var(--color-secondary);
+            border-radius: $btn-radius;
+            background: $color-secondary;
             transition: all .3s ease;
             &:hover {
-               background: var(--color-hover-btn);
+               background: $color-hover-btn;
             }
             &:focus {
-               background: var(--color-focus-btn);
+               background: $color-focus-btn;
             }
 
             span {
                @include typography(18px, 500, 22px);
-               color: var(--color-primary);
+               color: $color-primary;
             }
          }
       }
@@ -183,10 +180,10 @@
    .comments-slider {
       top: 50%;
       transform: translateY(-50%);
-      left: var(--slider-spacing);
+      left: $slider-spacing;
    }
 
-   @media screen and (min-width: #{$screen-min-lg}) and (max-width: #{$screen-max-lg}) {
+   @media screen and (min-width: $screen-min-lg) and (max-width: $screen-max-lg) {
 
       .comments-slider {
          left: auto;

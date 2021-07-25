@@ -86,8 +86,8 @@
 
    .main__container {
 
-      padding-right: var(--container-spacing);
-      padding-left: var(--container-spacing);
+      padding-right: $container-spacing;
+      padding-left: $container-spacing;
 
       &__banner {
          
@@ -113,7 +113,7 @@
 
             span:nth-of-type(1) {
                @include typography(48px, 600, 59px);
-               color: var(--color-secondary);
+               color: $color-secondary;
             }
 
             span:nth-of-type(2) {

@@ -87,17 +87,17 @@
 <style lang="scss" scoped>
 
    .comments-slider {
-      left: calc(-1 * var(--slider-size) - var(--slider-x-padding));
-      right: calc(-1 * var(--slider-size) - var(--slider-x-padding));
+      left: calc(-1 * #{$slider-size} - #{$slider-x-padding});
+      right: calc(-1 * #{$slider-size} - #{$slider-x-padding});
       top: 50%;
       transform: translateY(-50%);
    }
 
-   @media screen and (min-width: #{$screen-min-lg}) and (max-width: #{$screen-max-lg}) {
+   @media screen and (min-width: $screen-min-lg) and (max-width: $screen-max-lg) {
 
       .comments-slider {
          inset: auto;
-         bottom: calc(-1 * var(--slider-size) - var(--slider-y-padding));
+         bottom: calc(-1 * #{$slider-size} - #{$slider-y-padding});
       }
 
    }

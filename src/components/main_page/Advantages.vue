@@ -55,13 +55,13 @@
 <style lang="scss" scoped>
 
    .advants-card-container {
-      grid-template-columns: repeat(auto-fit, minmax(var(--card-width-xl), 1fr));
+      grid-template-columns: repeat(auto-fit, minmax($card-width-xl, 1fr));
    }   
 
-   @media screen and (min-width: #{$screen-min-lg}) and (max-width: #{$screen-max-lg}) {
+   @media screen and (min-width: $screen-min-lg) and (max-width: $screen-max-lg) {
 
       .advants-card-container {
-         grid-template-columns: repeat(auto-fit, minmax(var(--card-width-lg), 1fr)) !important;
+         grid-template-columns: repeat(auto-fit, minmax($card-width-lg, 1fr)) !important;
       }
 
    }

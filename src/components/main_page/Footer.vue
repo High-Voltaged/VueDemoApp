@@ -103,7 +103,7 @@
 
 <script lang="ts">
 
-   import { Component, Prop, Vue } from "nuxt-property-decorator";
+   import { Component, Vue } from "nuxt-property-decorator";
 
    @Component({
       name: 'Footer',
@@ -129,21 +129,19 @@
 
 <style lang="scss" scoped>
 
-   .main__container__footer {
-      --padding: 1.875rem;
+   $padding: 1.875rem;
 
-      --icon-radius: 50px;
-      --icon-size: 40px;
-      --icon-bg-color: rgba(224, 189, 137, 0.1);
-   }
+   $icon-radius: 50px;
+   $icon-size: 40px;
+   $icon-bg-color: rgba(224, 189, 137, 0.1);
 
    .main__container__footer {
-      padding-top: var(--padding);
-      padding-bottom: var(--padding);
+      padding-top: $padding;
+      padding-bottom: $padding;
 
       &--tabs__tab span {
          @include typography(14px, 500, 18px);
-         color: var(--color-gray-4);
+         color: $color-gray-4;
          transition: all .3s ease;
          &:hover {
             color: white;
@@ -152,43 +150,43 @@
 
       &--mail .mail {
          @include typography(16px, 500, 20px);
-         color: var(--color-gray-4);
+         color: $color-gray-4;
       }
 
       &--btn button {
-         border-radius: var(--btn-radius);
+         border-radius: $btn-radius;
          padding: 14px 24px;
-         background: var(--color-secondary);
+         background: $color-secondary;
          transition: all .3s ease;
          &:hover {
-            background: var(--color-hover-btn);
+            background: $color-hover-btn;
          }
          &:focus {
-            background: var(--color-focus-btn);
+            background: $color-focus-btn;
          }
 
          span {
             @include typography(18px, 500, 22px);
-            color: var(--color-primary);
+            color: $color-primary;
          }
       }
 
       &--divider {
          height: 1px;
-         background: var(--color-tertiary-2);
+         background: $color-tertiary-2;
       }
 
       .util-text-container span {
          @include typography(11px, 400, 13px);
-         color: var(--color-gray-4);
+         color: $color-gray-4;
       }
 
       .social-icons-container {
          .social-icon {
-            width: var(--icon-size);
-            height: var(--icon-size);
-            border-radius: var(--icon-radius);
-            background: var(--icon-bg-color);
+            width: $icon-size;
+            height: $icon-size;
+            border-radius: $icon-radius;
+            background: $icon-bg-color;
             transition: all .3s ease;
             &:hover, &:focus {
                background: rgba(224, 189, 137, 0.5);

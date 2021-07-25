@@ -91,9 +91,7 @@
 
 <style lang="scss" scoped>
 
-   .main__container__main-steps {
-      --overlay-size: 205px;
-   }
+   $overlay-size: 205px;
 
    .main__container__main-steps {
 
@@ -113,24 +111,24 @@
          .steps-title {
             margin-top: 7.25rem;
             margin-left: 5rem;
-            width: var(--overlay-size);
-            height: var(--overlay-size);
+            width: $overlay-size;
+            height: $overlay-size;
             
             &__title span {
                @include typography(200px, 600, 205px);
-               color: var(--color-secondary);
+               color: $color-secondary;
             }
 
 
             &__overlay {
-               width: var(--overlay-size);
-               height: var(--overlay-size);
+               width: $overlay-size;
+               height: $overlay-size;
                left: 50%;
                top: 50%;
-               margin-left: calc(-1 * var(--overlay-size) / 2);
-               margin-top: calc(-1 * var(--overlay-size) / 2);
+               margin-left: calc(-1 * #{$overlay-size} / 2);
+               margin-top: calc(-1 * #{$overlay-size} / 2);
                
-               background: radial-gradient(50% 50% at 50% 50%, var(--color-secondary) 0%, rgba(224, 189, 137, 0) 100%);
+               background: radial-gradient(50% 50% at 50% 50%, $color-secondary 0%, rgba(224, 189, 137, 0) 100%);
                opacity: 0.3;
                filter: blur(60px);
                border-radius: 100px;

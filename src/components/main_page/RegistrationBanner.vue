@@ -53,15 +53,13 @@
 
 <style lang="scss" scoped>
 
-   .main__container__main-regbanner {
-      --padding: 6.75rem;
-      --radius: 16px; 
-   }
+   $padding: 6.75rem;
+   $radius: 16px; 
 
    .main__container__main-regbanner {
-      padding: var(--padding);
-      background: var(--color-primary-2);
-      border-radius: var(--radius);
+      padding: $padding;
+      background: $color-primary-2;
+      border-radius: $radius;
 
       .regbanner__text {
          @include typography(40px, 600, 50px);
@@ -72,13 +70,13 @@
          z-index: 10;
 
          input {
-            height: var(--input-height);
-            width: calc(var(--input-width) * 2);
+            height: $input-height;
+            width: calc(#{$input-width} * 2);
             padding: 10px 24px;
 
-            border-radius: var(--input-radius);
-            background: var(--color-tertiary);
-            border: 1px solid var(--color-secondary);
+            border-radius: $input-radius;
+            background: $color-tertiary;
+            border: 1px solid $color-secondary;
 
             &:hover, &:focus {
                background: rgba(224, 189, 137, 0.1);
@@ -86,28 +84,28 @@
             }
             &::placeholder {
                @include typography(16px, 400, 24px);
-               color: var(--color-placeholder);
+               color: $color-placeholder;
             }
          } 
       
          button {
-            height: var(--input-height);
-            width: calc(var(--input-width) - 3.75rem);
+            height: $input-height;
+            width: calc(#{$input-width} - 3.75rem);
             padding: 21px 32px;
-            margin-left: calc(-1 * (var(--input-width) - 3.75rem));
+            margin-left: calc(-1 * (#{$input-width} - 3.75rem));
 
-            border-radius: var(--btn-radius);
-            background: var(--color-secondary);
+            border-radius: $btn-radius;
+            background: $color-secondary;
             transition: all .3s ease;
             &:hover {
-               background: var(--color-hover-btn);
+               background: $color-hover-btn;
             }
             &:focus {
-               background: var(--color-focus-btn);
+               background: $color-focus-btn;
             }
             span {
                @include typography(18px, 500, 22px);
-               color: var(--color-primary);
+               color: $color-primary;
             }
          }
 

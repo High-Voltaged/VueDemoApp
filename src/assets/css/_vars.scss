@@ -1,59 +1,50 @@
 // Responsive layout breakpoints
+
 $screen-min-lg: 1200px; 
 $screen-max-lg: 1579px; 
 
 // Major colors
-:root {
 
-   --color-primary: #202022;
-   --color-primary-2: #27272B;
-   --color-secondary: #E0BD89;
-   --color-secondary-2: #C6A370;
-   --color-tertiary: rgba(32, 32, 34, 0.3);
-   --color-tertiary-2: #3F3F3F;
+$color-primary: #202022;
+$color-primary-2: #27272B;
+$color-secondary: #E0BD89;
+$color-secondary-2: #C6A370;
+$color-tertiary: rgba(32, 32, 34, 0.3);
+$color-tertiary-2: #3F3F3F;
 
-   --color-gray: #878793;
-   --color-gray-2: #46464E;
-   --color-gray-3: #4C4C56;
-   --color-gray-4: #A1A2AA;
-   --color-placeholder: #D5D5D5;
+$color-gray: #878793;
+$color-gray-2: #46464E;
+$color-gray-3: #4C4C56;
+$color-gray-4: #A1A2AA;
+$color-placeholder: #D5D5D5;
 
-   --color-hover-btn: #E8D0AD;
-   --color-focus-btn: #DDB77F;
-
-}
+$color-hover-btn: #E8D0AD;
+$color-focus-btn: #DDB77F;
 
 // Container- and card-related
-:root {
 
-   --container-width-xl: 80rem;
-   --container-width-lg: 68rem;
-   --container-spacing: calc((100vw - var(--container-width-xl)) / 2);
-   --container-spacing-lg: calc((100vw - var(--container-width-lg)) / 2);
+$container-width-xl: 80rem;
+$container-width-lg: 68rem;
+$container-spacing: calc((100vw - #{$container-width-xl}) / 2);
+$container-spacing-lg: calc((100vw - #{$container-width-lg}) / 2);
 
-   --navbar-height: 4.5rem;
-   --navbar-height-sm: 4rem;
-   --navbar-padding: 1.5rem;
+$navbar-height: 4.5rem;
+$navbar-height-sm: 4rem;
 
-   --card-width-xl: 26rem;
-   --card-width-lg: 21.5rem;
-   --card-padding-xl: 48px 60px;
-   --card-padding-lg: 20px 14px;
-   --card-margin: 20px 4px;
+$card-width-xl: 26rem;
+$card-width-lg: 21.5rem;
+$card-padding-xl: 48px 60px;
 
-   --input-height: 4rem;
-   --input-width: 16rem;
+$input-height: 4rem;
+$input-width: 16rem;
 
-   --btn-radius: 90px;
-   --btn-radius-sm: 6px;
-   --input-radius: 60px;
-
-}
+$btn-radius: 90px;
+$btn-radius-sm: 6px;
+$input-radius: 60px;
 
 // Slider-related
-:root {
-   --slider-size: 3rem;
-   --slider-x-padding: 1.5rem;
-   --slider-y-padding: 2rem;
-   --slider-radius: 70px;
-}
+
+$slider-size: 3rem;
+$slider-x-padding: 1.5rem;
+$slider-y-padding: 2rem;
+$slider-radius: 70px;
