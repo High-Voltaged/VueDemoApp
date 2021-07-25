@@ -51,23 +51,21 @@
 
 <style lang="scss" scoped>
 
-   .comment-card {
-      --card-width: 26rem;
-      --card-height: 31.25rem;
-      --card-radius: 16px;
-      --card-shadow: 0px 20px 40px rgba(11, 11, 12, 0.1);
-   }
+   $card-width: 26rem;
+   $card-height: 31.25rem;
+   $card-radius: 16px;
+   $card-shadow: 0px 20px 40px rgba(11, 11, 12, 0.1);
 
    .comment-card {
 
-      max-width: var(--card-width);
-      min-height: var(--card-height);
+      max-width: $card-width;
+      min-height: $card-height;
 
       &__content {
          padding: 32px 24px;
          background: $color-primary-2;
-         border-radius: var(--card-radius);
-         box-shadow: var(--card-shadow);
+         border-radius: $card-radius;
+         box-shadow: $card-shadow;
       
          &--comment {
             @include typography(18px, 400, 26px);
