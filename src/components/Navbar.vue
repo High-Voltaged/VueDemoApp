@@ -12,7 +12,7 @@
 
          </div>
 
-         <div class="navbar-content--tabs flex items-center space-x-8 ml-12 tracking-tighter"> 
+         <div class="navbar-content--tabs flex items-center space-x-4 xl:space-x-8 ml-12 tracking-tighter"> 
 
             <div 
                v-for="(tab, i) in tabs"
@@ -199,9 +199,7 @@
             &:hover span, &:focus span {
                color: var(--color-primary);
             }
-            // &:hover svg, &:focus svg {
-            //    color: var(--color-primary) ;
-            // }
+            
             span {
                @include typography(16px, 500, 20px);
                color: var(--color-secondary);
