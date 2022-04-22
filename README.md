@@ -6,10 +6,10 @@
 
 ``` bash
 # install dependencies
-$ npm install # Шаг #1
+$ npm install
 
 # serve with hot reload at localhost:1337 (in your browser)
-$ npm run dev # Шаг #2
+$ npm run dev
 
 # build for production and launch server
 $ npm run build
